@@ -15,7 +15,7 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_DATABASE: expenseTracker_db
+      MYSQL_DATABASE: finore_db
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
