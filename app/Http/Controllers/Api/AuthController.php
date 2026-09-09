@@ -21,7 +21,9 @@ class AuthController extends Controller
             'email' => $fields['email'],
             'password' => Hash::make($fields['password']),
         ]);
-
+        if($user !==null){
+            $user->account()->create();
+        }
         return response()->json([
             'status' => 201,
             'message' => 'user created successfully',
